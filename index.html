@@ -1,0 +1,361 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <title>RESUME GENERATOR</title>
+  <style>h1 { text-shadow:2px 2px 5px red;}</style>
+  <style>h3 { text-shadow:2px 2px 5px greenyellow;}</style>
+  <style>h4 { text-shadow:2px 2px 5px rgba(116, 226, 108, 0.715);}</style>
+  <style>h2 P{border-style: dotted;
+    border-top-color: #ff0000;
+    text-shadow:2px 2px 5px rgb(15, 10, 160);
+    }</style>
+    
+<style>h5 { text-shadow:2px 2px 5px rgb(237, 11, 218);}</style>
+<style>
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+    
+    .button:hover {background-color: #dd1717}
+    
+    .button:active {
+      background-color: #1e91a3;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+</style> 
+
+<style>
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.5s;
+      cursor: pointer;
+    }
+    button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+button:hover {
+  background-color: #f44336;
+  color: white;
+}
+button:active {
+      background-color: #0b0c01;
+      transition-duration: 0.2s;
+    }
+</style>
+
+<style>
+    body {
+        background-image: url("img_tree.png");
+      background-repeat: no-repeat;
+      background-position: right top;
+      
+      background-attachment: fixed;
+    }
+    </style>  
+  
+</head>
+
+
+
+
+
+
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">RESUME GENERATOR</h1>
+        <h2 class="text-center my -2"><P><marquee direction="right">Fill up the form</marquee></P></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="form-group mt-2">
+                    <label for="nameField"><strong>Your Name</strong></label>
+                    <input
+                        type="text"
+                        id="nameField"
+                        placeholder="Name"
+                        class="form-control"
+                    />
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField"><strong>Your Contact</strong></label>
+                    <input
+                        type="number"
+                        id="contactField"  type="tel"
+                        placeholder="+910000000000"
+                        class="form-control"
+                    />
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField"><strong>Your Address</strong></label>
+                    <textarea
+                        id="addressField"
+                        placeholder="Enter here"
+                        class="form-control"
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <p class="text-secondary"><strong><em><u>Important Links</u></em></strong></p>
+
+                <div class="form-group mt-2">
+                    <label for="emailField"><strong>Email</strong></label>
+                    <input
+                        type="email"
+                        id="emailField"
+                        placeholder="https://mail.google.com/"
+                        class="form-control"
+                    />
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="githubField"><strong>github</strong></label>
+                    <input
+                        type="text"
+                        id="githubField"
+                        placeholder="@github"
+                        class="form-control"
+                    />
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="hakerrankField"><strong>Hakerrank</strong></label>
+                    <input
+                        type="text"
+                        id="hakerrankField"
+                        placeholder="https://www.hackerrank.com/"
+                        class="form-control"
+                    />
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="linkedField"><strong>LinkedIn</strong></label>
+                    <input
+                        type="text"
+                        id="LinkedField"
+                        placeholder="https://www.linkedin.com/"
+                        class="form-control"
+                    />
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <h4>Professional Information</h4>
+
+                <div class="form-group mt-2">
+                    <label for=""><strong>Objective</strong></label>
+                    <textarea
+                        id="objectiveField"
+                        rows="5"
+                        placeholder="Enter here" 
+                        class="form-control"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for=""><strong>Work Experience</strong></label>
+                    <textarea
+                        rows="3"
+                        placeholder="Experience"
+                        class="form-control weField"></textarea>
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label for=""><strong>Academic Qualification</strong></label>
+                    <textarea 
+                        rows="3"
+                        placeholder="Qualification"
+                        class="form-control aqField"></textarea>
+                        <div class="container text-center mt-2" id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                </div>
+
+                <div class="form-group mt-2" id="sk">
+                    <label for=""><strong>Skill</strong></label>
+                    <textarea 
+                        rows="3"
+                        placeholder="Skill"
+                        class="form-control skField"></textarea>
+                        <div class="container text-center mt-2" id="skAddButton">
+                            <button onclick="addNewSKField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="button">Generate CV</button>
+        </div>
+    </div>
+
+    <div class="conatiner" id="cv-template">
+        
+        <div class="row">
+
+            <div class="col-md-4 text-center py-5 background">
+                <img 
+                    src="https://media-exp1.licdn.com/dms/image/C5603AQEhFC7lUM0DOA/profile-displayphoto-shrink_400_400/0/1648041481666?e=1658966400&v=beta&t=dXEtp0q4jKOTLtL1pa6KO2GAAGRTLKoGNT-VknkWk4s"
+                    alt=""
+                    class="img-fluid myimg"
+                />
+
+                <div class="container">
+                    <p id="nameT1">Vibhakar mishra</p>
+                    <p id="contactT">+919709367557,+917979728042</p>
+                    <P id="addressT">Madhubani, BIHAR, India</p>
+
+                    <hr />
+
+                    <p> <a id="emT" href="#1">misra.vihakar7262@gmail.com</a></p>
+                    <p> <a id="ghT" href="#2">https://github.com/mishra06</a></p>
+                    <p> <a id="hrT" href="#3">https://www.hackerrank.com/mishra_vibhakar1</a></p>
+                    <p> <a id="LinkedT" href="#4">https://www.linkedin.com/in/vibhakar-mishra-7a6904214/</a></p>
+                    
+                </div>
+
+            </div>
+
+            <div class="col-md-8 py-5">
+                <h5 id="nameT2" class="text-center" style="font-weight:680">
+                    Vibhakar mishra
+                </h5>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <p id="objectiveT">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ea vitae distinctio in incidunt. Sapiente quis nemo perferendis ea eaque non, nesciunt necessitatibus deleniti tempora earum ad vel nisi fugiat!
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+                        </ul>
+                        
+                    </div>
+
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro 
+                                debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro 
+                                debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro 
+                                debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro 
+                                debitis quas incidunt!</li>
+                        </ul>                        
+                    </div>
+
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Skills</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <ul id="skT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias accusamus, reiciendis amet vitae a 
+                                repellendus quo quod voluptate provident magni blanditiis ea, dolorem quisquam aliquam optio. Porro debitis quas incidunt!</li>
+                        </ul>
+                        
+                    </div>
+
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class=".button">Print CV</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
